@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  nginx:
+    container_name: playground-nginx
+    ports:
+      - "8000:80"
+    volumes:
+      - ./public:/app/public
+
+  app:
+    container_name: playground-app
+    environment:
+      - APP_ENV=dev
+      - APP_HOST=http://127.0.0.1:8000
+    volumes:
+      - ./:/app
+    build:
+      target: build_php
+      args:
+        - APP_ENV=dev
+
+  db:
+    container_name: playground-db
+    ports:
+      - "5432:5432"

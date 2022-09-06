@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Playground - test{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; padding: 20px; min-height: 50vh; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<div class="example-wrapper uk-card uk-card-large uk-card-default">
+    <h2>Markdown - dynamic update</h2>
+    <div data-controller="markdown">
+        <textarea class="uk-textarea" data-action="input->markdown#changed"></textarea>
+        <div class="example-wrapper">
+            <article class="uk-article">
+                <h1 class="uk-article-title"><a class="uk-link-reset" href="">Heading</a></h1>
+                <p class="uk-text-lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                </p>
+                <i>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </i>
+
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}
