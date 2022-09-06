@@ -18,8 +18,3 @@ services:
       target: build_php
       args:
         - APP_ENV=dev
-
-  db:
-    container_name: playground-db
-    ports:
-      - "5432:5432"

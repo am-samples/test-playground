@@ -2,7 +2,7 @@
   <div class="example-wrapper uk-card uk-card-large uk-card-default">
     <h2>Markdown - dynamic update</h2>
     <div>
-      <span>*text* - italic, **text** - bold</span>
+      <span>*text* - italic, **text** - bold, (You can use underscore (_) instead *)</span>
       <textarea class="uk-textarea" v-model="text"></textarea>
       <viewer :markdown="text"></viewer>
     </div>
