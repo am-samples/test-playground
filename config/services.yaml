@@ -22,3 +22,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    League\CommonMark\CommonMarkConverter:
+        class: League\CommonMark\CommonMarkConverter
+        arguments:
+            $config: { html_input: 'strip', allow_unsafe_links: false }
